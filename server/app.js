@@ -247,7 +247,7 @@ app.get('/start',(req,res) => {
 })
 
 
-app.listen(3000 || process.end.PORT,()=>{
+app.listen(3000 || process.env.PORT,()=>{
   console.log('listening PORT 3000');
 })
 
