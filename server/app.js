@@ -8,7 +8,7 @@ app.use(cors())
 
 var config = {
     databaseURL: "https://imageandfacerecognition.firebaseio.com",
-    projectId: "imageandfacerecognition",
+    projectId: "imageandfacerecognition"
 }
 
 const firebaseApp = api.initializeApp(config)
@@ -219,8 +219,8 @@ class TreeGroove{
 
 
 app.get('/start',(req,res) => {
-  console.log('masuk routing start')
-  res.send('masuk routing start')
+  console.log('masuk routing grow')
+  res.send('masuk routing grow')
   treeMango._name = 'MangoTree'
   treeMango._age  = 1
   treeMango._height = 2
@@ -230,16 +230,16 @@ app.get('/start',(req,res) => {
     treeMango.grow()
     treeMango.produce()
     treeMango.harvest()
-    db.ref('siMangga').set({
+    db.ref('manggo').set({
       isDead:'',
       status: `[Year ${treeMango._age} Report] Height = ${treeMango._height} | Fruits harvested = ${treeMango._harvested}`
     })
     console.log(`\n===================Data ${treeMango._name} tree:======================================\n`);
     console.log(`[Year ${treeMango._age} Report] Height = ${treeMango._height} | Fruits harvested = ${treeMango._harvested}`)
     if (treeMango._healthyStatus == false) {
-      console.log('Pohon mangganya dead')
-      db.ref('siMangga').set({
-        isDead: 'Pohon mangganya dead'
+      console.log('its dead')
+      db.ref('manggo').set({
+        isDead: 'Your Tree was gone :('
       })
       ngitung.stop()
     }

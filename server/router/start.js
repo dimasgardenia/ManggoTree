@@ -12,7 +12,7 @@ router.get('/',(req,res) => {
     treeMango.grow()
     treeMango.produce()
     treeMango.harvest()
-    db.ref('siMangga').set({
+    db.ref('manggo').set({
       isDead:'',
       status: `[Year ${treeMango._age} Report] Height = ${treeMango._height} | Fruits harvested = ${treeMango._harvested}`
     })
