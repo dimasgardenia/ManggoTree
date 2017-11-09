@@ -247,9 +247,10 @@ app.get('/start',(req,res) => {
 })
 
 
-app.listen(3000 || process.env.PORT,()=>{
-  console.log('listening PORT 3000');
+app.listen(process.env.PORT || 3000, ()=>{
+  console.log('i am running at port 3000')
 })
+
 
 module.exports = {
   app,
